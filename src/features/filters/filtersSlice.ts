@@ -7,7 +7,7 @@ const initialState: TodoFilter = {
 }
 
 
-export const appReducer = (state = initialState, action: FilterAction) => {
+export const filtersReducer = (state = initialState, action: FilterAction) => {
   switch (action.type) {
     case CHANGE_FILTER: {
       return {
