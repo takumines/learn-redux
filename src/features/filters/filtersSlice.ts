@@ -1,5 +1,6 @@
-import { CHANGE_FILTER, FilterAction } from "./action.ts"
-import { TodoFilter } from "./type.ts"
+import { TodoFilter } from "@/src/features/filters/type.ts"
+import { CHANGE_FILTER, FilterAction } from "@/src/features/filters/action.ts"
+
 
 const initialState: TodoFilter = {
   status: "All",

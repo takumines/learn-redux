@@ -1,7 +1,7 @@
 import { combineReducers } from "redux"
 
-import { filtersReducer } from "./features/filters/filtersSlice.ts"
-import { todosReducer } from "./features/todos/todoSlice.ts"
+import { todosReducer } from "@/src/features/todos"
+import { filtersReducer } from "@/src/features/filters"
 
 const rootReducer = combineReducers({
   tools: todosReducer,

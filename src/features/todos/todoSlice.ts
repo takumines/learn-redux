@@ -1,5 +1,6 @@
-import { Todo } from "./type.ts"
-import { ADD_TODO, TodoAction, TOGGLE_TODO } from "./action.ts"
+import { Todo } from "@/src/features/todos/type.ts"
+import { ADD_TODO, TodoAction, TOGGLE_TODO } from "@/src/features/todos/action.ts"
+
 
 const initialState: Todo[] = [
   { id: 0, text: "Learn React", completed: true },
