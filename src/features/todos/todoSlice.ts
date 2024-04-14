@@ -16,32 +16,26 @@ const generateTodoId = (todos: Todo[]) => {
 export const todosReducer = (state = initialState, action: TodoAction) => {
   switch (action.type) {
     case ADD_TODO: {
-      return {
+      return [
         ...state,
-        todos: [
-          ...state,
-          {
-            id: generateTodoId(state),
-            text: action.payload,
-            completed: false
-          }
-        ]
-      }
+        {
+          id: generateTodoId(state),
+          text: action.payload,
+          completed: false
+        }
+      ]
     }
     case TOGGLE_TODO: {
-      return {
-        ...state,
-        todos: state.map((todo) => {
-          if (todo.id !== action.payload) {
-            return todo
-          }
+      return state.map(todo => {
+        if (todo.id !== action.payload) {
+          return todo
+        }
 
-          return {
-            ...todo,
-            completed: !todo.completed
-          }
-        })
-      }
+        return {
+          ...todo,
+          completed: !todo.completed
+        }
+      })
     }
     default:
       return state
